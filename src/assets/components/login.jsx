@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import iconApp from "../../../public/image/logo.svg";
+import iconApp from "../icons/logo.svg";
 import "../styles/login.css";
 import { useForm } from "react-hook-form";
 
-export function LoginEntertainmentApp() {
+export function LoginEntertainmentApp({ onLoginSuccess }) {
   const {
     register,
     handleSubmit,
@@ -12,7 +12,9 @@ export function LoginEntertainmentApp() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (values) => alert(JSON.stringify(values, null, 2));
+  const onSubmit = () => {
+    onLoginSuccess(); //Llamamos a la función que se envió por props
+  };
 
   const [formAccount, setFormAccount] = useState(false);
 

@@ -62,6 +62,7 @@
 
             &::placeholder {
               font-size: var(--prst-tipe-4);
+              color: var(--colorGreyishBlue);
             }
 
             &:hover {

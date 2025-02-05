@@ -1,0 +1,128 @@
+@import url(../../index.css);
+
+.content__allLogin-and-SingUp {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .bx-logo {
+    margin-bottom: 5rem;
+  }
+
+  .content__allSection {
+    width: 400px;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 2rem;
+    background-color: var(--colorSemiDarkBlue);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    transition: all;
+    overflow: hidden;
+
+    .loginTitle {
+      font-size: var(--prst-tipe-1);
+      color: var(--colorWhite);
+      font-weight: 300;
+
+      display: block;
+    }
+
+    .bx-formLogin {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .bx-inputs_login {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .bx-inputs {
+          position: relative;
+
+          .stylesForInputs {
+            width: 100%;
+            height: 37px;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            text-indent: 1rem;
+            padding-bottom: 1rem;
+            color: var(--colorWhite);
+            font-size: var(--prst-tipe-4);
+            border-bottom: 2px solid var(--colorGreyishBlue);
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            font-weight: 300;
+
+            &::placeholder {
+              font-size: var(--prst-tipe-4);
+            }
+
+            &:hover {
+              border-color: var(--colorWhite);
+            }
+
+            &:focus {
+              border-color: var(--colorWhite);
+            }
+          }
+
+          .error-border {
+            border-color: var(--colorRed);
+          }
+
+          .error {
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 0;
+            font-size: var(--prst-tipe-5);
+            color: var(--colorRed);
+            font-weight: 300;
+          }
+        }
+      }
+    }
+
+    .bx-btn-account {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 1.3rem;
+      color: var(--colorWhite);
+      font-weight: 300;
+      font-size: var(--prst-tipe-4);
+
+      .btnAccount {
+        width: 100%;
+        height: 48px;
+        outline: none;
+        border: none;
+        background-color: var(--colorRed);
+        border-radius: 6px;
+        color: var(--colorWhite);
+        font-size: var(--prst-tipe-4);
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          color: var(--colorDarkBlue);
+          background-color: var(--colorWhite);
+        }
+      }
+
+      .descriptionAccount {
+        .styleTextColorFull {
+          color: var(--colorRed);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

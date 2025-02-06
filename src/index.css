@@ -17,6 +17,14 @@
   --prst-tipe-5: 13px;
 }
 
+.titles {
+  display: block;
+  color: var(--colorWhite);
+  font-size: var(--prst-tipe-1);
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,5 +34,9 @@
   body {
     height: 100%;
     background-color: var(--colorDarkBlue);
+
+    #content__allAplicationEntertainment {
+      height: 100vh;
+    }
   }
 }

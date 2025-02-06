@@ -1,0 +1,57 @@
+.content__allHomeAplicaction {
+  display: flex;
+
+  .content__sideNavbar-homeAplication {
+    width: fit-content;
+    height: 100vh;
+    padding: 1.5rem;
+  }
+
+  .content__homeAplication {
+    margin-top: 3rem;
+    width: 100%;
+
+    .search-movies {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 34px;
+
+      .search-movies__input {
+        width: calc(100% - 84px);
+
+        outline: none;
+        border: none;
+        background-color: transparent;
+        color: var(--colorWhite);
+        font-size: var(--prst-tipe-3);
+        padding-bottom: 1rem;
+        transition: 0.5s ease-in-out;
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+        font-weight: 400;
+
+        &::placeholder {
+          font-size: var(--prst-tipe-3);
+          color: hsl(0, 0%, 100%, 50%);
+          font-weight: 400;
+        }
+
+        &:hover {
+          border-color: var(--colorGreyishBlue);
+        }
+      }
+    }
+
+    .content__trendingHomeAplication {
+      width: 100%;
+      .content__carousel-trending {
+        width: 100%;
+        display: flex;
+        gap: 40px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+      }
+    }
+  }
+}

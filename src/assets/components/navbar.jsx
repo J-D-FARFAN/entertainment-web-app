@@ -4,6 +4,7 @@ import IconNavHome from "./iconComponents/iconHome";
 import IconNavMovies from "./iconComponents/iconMovies";
 import IconNavTv from "./iconComponents/iconTv";
 import IconNavBookmarker from "./iconComponents/iconBookmarker";
+import "../styles/navbar.css";
 
 export function NavbarAplication() {
   return (

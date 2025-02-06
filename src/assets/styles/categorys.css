@@ -1,0 +1,23 @@
+@import url(../../index.css);
+
+.circles {
+  width: 4px;
+  height: 4px;
+  background-color: hsl(0, 0%, 100%, 50%);
+  border-radius: 50%;
+}
+
+.content__categoryMovies {
+  color: hsl(0, 0%, 100%, 75%);
+  font-size: var(--prst-tipe-4);
+  font-weight: 300;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+
+  .bx-category {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+}

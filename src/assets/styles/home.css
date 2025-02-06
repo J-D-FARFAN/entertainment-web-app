@@ -1,5 +1,6 @@
 .content__allHomeAplicaction {
   display: flex;
+  overflow: hidden;
 
   .content__sideNavbar-homeAplication {
     width: fit-content;
@@ -44,13 +45,16 @@
     }
 
     .content__trendingHomeAplication {
-      width: 100%;
       .content__carousel-trending {
         width: 100%;
         display: flex;
         gap: 40px;
         overflow-x: auto;
-        scroll-snap-type: x mandatory;
+        padding-right: 160px;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
       }
     }
   }

@@ -25,7 +25,8 @@ export function LoginEntertainmentApp({ onLoginSuccess }) {
   // Función para limpiar errores al escribir
   const handleInputChange = (field) => {
     if (errors[field]) {
-      clearErrors(field);
+      //Si hay un error en el campo
+      clearErrors(field); //Limpiamos el error
     }
   };
 

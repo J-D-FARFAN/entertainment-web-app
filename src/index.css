@@ -32,11 +32,15 @@
   font-family: var(--fontFAll);
 
   body {
-    height: 100%;
+    height: fit-content;
     background-color: var(--colorDarkBlue);
 
     #content__allAplicationEntertainment {
-      height: 100vh;
+      height: fit-content;
+    }
+
+    .content__allHomeEntertaimentApp {
+      min-height: fit-content;
     }
   }
 }

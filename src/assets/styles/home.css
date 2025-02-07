@@ -1,5 +1,7 @@
 .content__allHomeAplicaction {
   display: flex;
+  height: fit-content;
+  padding-bottom: 2rem;
   overflow-x: hidden;
 
   .content__sideNavbar-homeAplication {

@@ -17,6 +17,24 @@
   --prst-tipe-5: 13px;
 }
 
+.bx-icon-navbar {
+  .colorIconsNavbar {
+    color: var(--colorGreyishBlue);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--colorRed);
+    }
+  }
+}
+
+.bx-icon-navbar.active {
+  .colorIconsNavbar {
+    color: var(--colorWhite);
+  }
+}
+
 .titles {
   display: block;
   color: var(--colorWhite);

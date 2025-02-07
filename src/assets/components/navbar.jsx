@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import avatar from "../../../public/image/image-avatar.png";
 import iconApp from "../icons/logo.svg";
 import IconNavHome from "./iconComponents/iconHome";
@@ -7,6 +8,12 @@ import IconNavBookmarker from "./iconComponents/iconBookmarker";
 import "../styles/navbar.css";
 
 export function NavbarAplication() {
+  const [activeIndex, setActiveIndex] = useState(0); // Inicialmente, el primer elemento está activo
+
+  const handleClick = (index) => {
+    setActiveIndex(index);
+  };
+
   return (
     <>
       <article className="allNavbar">
@@ -16,17 +23,29 @@ export function NavbarAplication() {
           </div>
 
           <figure className="btns-navbar">
-            <div className="bx-icon-navbar">
-              <IconNavHome />
+            <div
+              className={`bx-icon-navbar ${activeIndex === 0 ? "active" : ""}`}
+              onClick={() => handleClick(0)}
+            >
+              <IconNavHome colorActive={"colorIconsNavbar"} />
             </div>
-            <div className="bx-icon-navbar">
-              <IconNavMovies />
+            <div
+              className={`bx-icon-navbar ${activeIndex === 1 ? "active" : ""}`}
+              onClick={() => handleClick(1)}
+            >
+              <IconNavMovies colorActive={"colorIconsNavbar"} />
             </div>
-            <div className="bx-icon-navbar">
-              <IconNavTv />
+            <div
+              className={`bx-icon-navbar ${activeIndex === 2 ? "active" : ""}`}
+              onClick={() => handleClick(2)}
+            >
+              <IconNavTv colorActive={"colorIconsNavbar"} />
             </div>
-            <div className="bx-icon-navbar">
-              <IconNavBookmarker />
+            <div
+              className={`bx-icon-navbar ${activeIndex === 3 ? "active" : ""}`}
+              onClick={() => handleClick(3)}
+            >
+              <IconNavBookmarker colorActive={"colorIconsNavbar"} />
             </div>
           </figure>
         </section>

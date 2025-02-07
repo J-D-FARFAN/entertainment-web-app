@@ -4,7 +4,15 @@ import IconFavorite from "./iconComponents/iconFavorite";
 import IconPlay from "../icons/icon-play.svg";
 import "../styles/carousel.css";
 
-export function CarouselTrending() {
+export function CarouselTrending({
+  NameMovie,
+  year,
+  rating,
+  category,
+  imagePresentationMovie,
+  nameMoviesIsNotTrending,
+  isTrending,
+}) {
   const [favorite, setFavorite] = useState("");
 
   const handleClickFavorite = () =>
@@ -13,26 +21,48 @@ export function CarouselTrending() {
   return (
     <>
       <article className="bx-cardTrending">
-        <article className="content_wacthMovie">
-          <figure className="containerPlay">
-            <div className="bx-iconPlay">
-              <img src={IconPlay} alt="Icon Play" className="iconPlay" />
+        <section
+          className="cardTrending"
+          style={{ backgroundImage: `url(${imagePresentationMovie})` }}
+        >
+          <div className="darkness"></div>
+          <article className="content_wacthMovie">
+            <figure className="containerPlay">
+              <div className="bx-iconPlay">
+                <img src={IconPlay} alt="Icon Play" className="iconPlay" />
+              </div>
+
+              <span className="textPlay">Play</span>
+            </figure>
+          </article>
+
+          <section className="infoDescription-movie">
+            <div className="bx-icon-favorite" onClick={handleClickFavorite}>
+              <IconFavorite
+                classFavorite={`styleForIconFavorite ${favorite}`}
+              />
             </div>
 
-            <span className="textPlay">Play</span>
-          </figure>
-        </article>
-
-        <section className="infoDescription-movie">
-          <div className="bx-icon-favorite" onClick={handleClickFavorite}>
-            <IconFavorite classFavorite={`styleForIconFavorite ${favorite}`} />
-          </div>
-
-          <div className="bx-infoMovie">
-            <Categorys />
-          </div>
-          <span className="nameMovie">Beyond Earth</span>
+            {isTrending && (
+              <>
+                <div className="bx-infoMovie">
+                  <Categorys year={year} category={category} rating={rating} />
+                </div>
+                <span className="nameMovie">{NameMovie}</span>
+              </>
+            )}
+          </section>
         </section>
+
+        {!isTrending && (
+          <section className="bx-isNotTrending">
+            <div className="bx-categoryNotTrending">
+              <Categorys year={year} category={category} rating={rating} />
+            </div>
+
+            <span className="titleNotTrending">{nameMoviesIsNotTrending}</span>
+          </section>
+        )}
       </article>
     </>
   );

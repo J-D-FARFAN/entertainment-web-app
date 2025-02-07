@@ -1,6 +1,6 @@
 .content__allHomeAplicaction {
   display: flex;
-  overflow: hidden;
+  overflow-x: hidden;
 
   .content__sideNavbar-homeAplication {
     width: fit-content;
@@ -19,7 +19,7 @@
       margin-bottom: 34px;
 
       .search-movies__input {
-        width: calc(100% - 84px);
+        width: calc(100% - 220px);
 
         outline: none;
         border: none;
@@ -41,6 +41,10 @@
         &:hover {
           border-color: var(--colorGreyishBlue);
         }
+
+        &:focus {
+          border-color: var(--colorGreyishBlue);
+        }
       }
     }
 
@@ -50,10 +54,31 @@
         display: flex;
         gap: 40px;
         overflow-x: auto;
-        padding-right: 160px;
+        padding-right: 150px;
 
         &::-webkit-scrollbar {
           display: none;
+        }
+
+        .bx-cardCaousel {
+          min-width: 470px;
+        }
+      }
+    }
+
+    .content_dashboardMovies {
+      width: 90vw;
+      height: 100%;
+      margin-top: 2rem;
+
+      .dashboardMovies {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 40px;
+
+        .bx-cardDashboardMovies {
+          min-width: 280px;
+          min-height: 226px;
         }
       }
     }

@@ -1,11 +1,11 @@
 import iconCategory from "../icons/icon-category-movie.svg";
 import "../styles/categorys.css";
 
-export function Categorys() {
+export function Categorys({ year, category, rating }) {
   return (
     <>
       <article className="content__categoryMovies">
-        <span className="years">2019</span>
+        <span className="years">{year}</span>
 
         <span className="circles"></span>
 
@@ -13,12 +13,12 @@ export function Categorys() {
           <span className="bx-iconCategory">
             <img src={iconCategory} alt="" className="iconCategory" />
           </span>
-          <span className="category">Movie</span>
+          <span className="category">{category}</span>
         </div>
 
         <span className="circles"></span>
 
-        <span className="rating">PG</span>
+        <span className="rating">{rating}</span>
       </article>
     </>
   );

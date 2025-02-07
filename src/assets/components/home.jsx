@@ -3,6 +3,7 @@ import iconSearch from "../icons/icon-search.svg";
 import "../styles/home.css";
 import { CarouselTrending } from "./carouselTrending";
 import { useRef, useState } from "react";
+import dataApp from "../../data/data.json";
 
 export function HomeEntertainmentApp() {
   const carouselRef = useRef(null);
@@ -36,16 +37,16 @@ export function HomeEntertainmentApp() {
         </nav>
 
         <section className="content__homeAplication">
-          <search className="search-movies">
+          <article className="search-movies">
             <div className="bx-icon-search">
               <img src={iconSearch} alt="" className="iconSearch" />
             </div>
             <input
-              type="serch"
+              type="search"
               placeholder="Search for movies or TV series"
               className="search-movies__input"
             />
-          </search>
+          </article>
 
           <figure className="content__trendingHomeAplication">
             <span className="titles">Trending</span>
@@ -58,19 +59,52 @@ export function HomeEntertainmentApp() {
               onMouseUp={handleMouseUp}
               onMouseMove={handleMouseMove}
             >
-              <CarouselTrending />
-              <CarouselTrending />
-              <CarouselTrending />
-              <CarouselTrending />
-              <CarouselTrending />
-              <CarouselTrending />
-              <CarouselTrending />
-
-              <CarouselTrending />
-              <CarouselTrending />
-              <CarouselTrending />
+              {dataApp
+                .filter((item) => item.isTrending) // Filtra solo los elementos que son tendencia
+                .map((item, index) => {
+                  // Mapea los elementos que son tendencia
+                  return (
+                    <div className="bx-cardCaousel" key={index}>
+                      <CarouselTrending
+                        year={item.year}
+                        rating={item.rating}
+                        category={item.category}
+                        NameMovie={item.title}
+                        imagePresentationMovie={item.thumbnail.trending.large}
+                        isTrending={item.isTrending}
+                      />
+                    </div>
+                  );
+                })}
             </article>
           </figure>
+
+          <article className="content_dashboardMovies">
+            <h1 className="titles">Recommended for you</h1>
+
+            <figure className="dashboardMovies">
+              {dataApp
+                .filter((item) => !item.isTrending) // Filtra solo los elementos que no son tendencia
+                .map(
+                  (
+                    item,
+                    index // Mapea los elementos que no son tendencia
+                  ) => (
+                    <div className="bx-cardDashboardMovies" key={index}>
+                      <CarouselTrending
+                        year={item.year}
+                        rating={item.rating}
+                        category={item.category}
+                        NameMovie={item.title}
+                        imagePresentationMovie={item.thumbnail.regular.large}
+                        nameMoviesIsNotTrending={item.title}
+                        isTrending={item.isTrending}
+                      />
+                    </div>
+                  )
+                )}
+            </figure>
+          </article>
         </section>
       </article>
     </>

@@ -1,117 +1,140 @@
 .bx-cardTrending {
-  position: relative;
-  min-width: 470px;
-  height: 230px;
-  padding: 2rem;
-  border-radius: 8px;
-  background: url(../../../public/image/thumbnails/beyond-earth/trending/large.jpg)
-      center,
-    no-repeat;
-  background-size: cover;
-  cursor: pointer;
-  overflow: hidden;
-
+  width: 100%;
   display: flex;
-  align-items: end;
+  flex-direction: column;
+  gap: 8px;
 
-  .content_wacthMovie {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    opacity: 0;
+  .cardTrending {
+    position: relative;
+    height: 230px;
+    padding: 2rem;
     border-radius: 8px;
-    width: 100%;
-    height: 100%;
-    background-color: hsl(0, 0%, 0%, 50%);
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.6s ease-in-out;
-    pointer-events: none;
+    align-items: end;
 
-    .containerPlay {
-      width: 117px;
-      height: 48px;
-      cursor: pointer;
-
-      border-radius: 28.5px;
-      padding: 0.5rem 1rem;
-      background-color: hsl(0, 0%, 100%, 25%);
-      color: var(--colorWhite);
-      font-weight: 500;
-      font-size: var(--prst-tipe-3);
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .bx-iconPlay {
-        display: flex;
-        user-select: none;
-      }
-      .textPlay {
-        user-select: none;
-      }
-    }
-  }
-
-  .infoDescription-movie {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    z-index: 2;
-    user-select: none;
-
-    .bx-icon-favorite {
+    .darkness {
       position: absolute;
-      top: 2rem;
-      right: 2rem;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, hsla(0, 0%, 0%), transparent);
+      top: 0;
+      left: 0;
+    }
 
-      width: 32px;
-      height: 32px;
+    .content_wacthMovie {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      opacity: 0;
+      border-radius: 8px;
+      width: 100%;
+      height: 100%;
+      background-color: hsl(0, 0%, 0%, 50%);
+
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: hsl(223, 30%, 9%, 50%);
-      border-radius: 50%;
-      cursor: pointer;
+      transition: 0.6s ease-in-out;
+      pointer-events: none;
 
-      transition: all 0.3s ease-in-out;
+      .containerPlay {
+        width: 117px;
+        height: 48px;
+        cursor: pointer;
 
-      .styleForIconFavorite {
-        transform: rotate(1.7deg) scale(1.1);
-        fill: transparent;
-        stroke: var(--colorWhite);
-        transition: all 0.3s ease-in-out;
-      }
+        border-radius: 28.5px;
+        padding: 0.5rem 1rem;
+        background-color: hsl(0, 0%, 100%, 25%);
+        color: var(--colorWhite);
+        font-weight: 500;
+        font-size: var(--prst-tipe-3);
 
-      .saveFavorite {
-        fill: var(--colorWhite);
-        stroke: transparent;
-        transition: all 0.3s ease-in-out;
-      }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-      &:hover {
-        background-color: var(--colorWhite);
-
-        .styleForIconFavorite {
-          stroke: var(--colorDarkBlue);
+        .bx-iconPlay {
+          display: flex;
+          user-select: none;
+        }
+        .textPlay {
+          user-select: none;
         }
       }
     }
 
-    .nameMovie {
-      font-size: var(--prst-tipe-2);
-      color: var(--colorWhite);
-      font-weight: bold;
+    .infoDescription-movie {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      z-index: 2;
+      user-select: none;
+
+      .bx-icon-favorite {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(223, 30%, 9%, 50%);
+        border-radius: 50%;
+        cursor: pointer;
+
+        transition: all 0.3s ease-in-out;
+
+        .styleForIconFavorite {
+          transform: rotate(1.7deg) scale(1.1);
+          fill: transparent;
+          stroke: var(--colorWhite);
+          transition: all 0.3s ease-in-out;
+        }
+
+        .saveFavorite {
+          fill: var(--colorWhite);
+          stroke: transparent;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+          background-color: var(--colorWhite);
+
+          .styleForIconFavorite {
+            stroke: var(--colorDarkBlue);
+          }
+        }
+      }
+
+      .nameMovie {
+        font-size: var(--prst-tipe-2);
+        color: var(--colorWhite);
+        font-weight: bold;
+      }
+    }
+
+    &:hover {
+      .content_wacthMovie {
+        top: 0;
+        opacity: 1;
+      }
     }
   }
 
-  &:hover {
-    .content_wacthMovie {
-      top: 0;
-      opacity: 1;
+  .bx-isNotTrending {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .titleNotTrending {
+      font-size: var(--prst-tipe-3);
+      color: var(--colorWhite);
     }
   }
 }

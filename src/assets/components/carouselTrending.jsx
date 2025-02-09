@@ -1,5 +1,5 @@
 import { Categorys } from "./categorys";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import IconFavorite from "./iconComponents/iconFavorite";
 import IconPlay from "../icons/icon-play.svg";
 import "../styles/carousel.css";
@@ -12,11 +12,17 @@ export function CarouselTrending({
   imagePresentationMovie,
   nameMoviesIsNotTrending,
   isTrending,
+  dataIsBookmarked,
 }) {
-  const [favorite, setFavorite] = useState("");
+  const [favorite, setFavorite] = useState(dataIsBookmarked);
 
-  const handleClickFavorite = () =>
-    setFavorite(!favorite ? "saveFavorite" : "");
+  useEffect(() => {
+    setFavorite(dataIsBookmarked);
+  }, [dataIsBookmarked]);
+
+  const handleClickFavorite = () => {
+    setFavorite(!favorite);
+  };
 
   return (
     <>
@@ -39,7 +45,9 @@ export function CarouselTrending({
           <section className="infoDescription-movie">
             <div className="bx-icon-favorite" onClick={handleClickFavorite}>
               <IconFavorite
-                classFavorite={`styleForIconFavorite ${favorite}`}
+                classFavorite={`styleForIconFavorite ${
+                  favorite ? "saveFavorite" : ""
+                }`}
               />
             </div>
 

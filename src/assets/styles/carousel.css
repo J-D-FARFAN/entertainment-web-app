@@ -9,6 +9,8 @@
     height: 230px;
     padding: 2rem;
     border-radius: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
     overflow: hidden;

@@ -121,8 +121,7 @@
       .content__trendingHomeAplication {
         .content__carousel-trending {
           .bx-cardCaousel {
-            min-width: 340px;
-            border: 2px solid red;
+            min-width: 370px;
           }
         }
       }

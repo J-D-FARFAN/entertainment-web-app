@@ -28,7 +28,7 @@ export function CarouselTrending({
     <>
       <article className="bx-cardTrending">
         <section
-          className="cardTrending"
+          className="cardTrending styleHMovile"
           style={{ backgroundImage: `url(${imagePresentationMovie})` }}
         >
           <div className="darkness"></div>

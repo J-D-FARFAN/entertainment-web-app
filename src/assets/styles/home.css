@@ -86,3 +86,21 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .content__allHomeAplicaction {
+    flex-direction: column;
+    .content__sideNavbar-homeAplication {
+      width: 100%;
+      height: fit-content;
+    }
+
+    .content__homeAplication {
+      margin-top: 0;
+
+      .search-movies {
+        padding-left: 1.5rem;
+      }
+    }
+  }
+}

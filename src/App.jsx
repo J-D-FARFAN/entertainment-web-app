@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      {/*isAuthenticated ? (
+      {isAuthenticated ? (
         <div className="content__allHomeEntertaimentApp">
           <HomeEntertainmentApp />
         </div>
@@ -18,9 +18,7 @@ function App() {
         <div className="content__allLoginEntertainmentApp">
           <LoginEntertainmentApp onLoginSuccess={handleLoginSuccess} />
         </div>
-      )*/}
-
-      <HomeEntertainmentApp />
+      )}
     </>
   );
 }

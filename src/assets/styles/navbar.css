@@ -31,7 +31,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 824px) {
   .allNavbar {
     width: 100%;
     height: 72px;
@@ -42,6 +42,14 @@
       flex-direction: row;
       flex-grow: initial;
       margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 508px) {
+  .allNavbar {
+    .btns-navbar {
+      gap: 20px;
     }
   }
 }

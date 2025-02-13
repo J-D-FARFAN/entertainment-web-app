@@ -120,6 +120,8 @@
     .content__homeAplication {
       .content__trendingHomeAplication {
         .content__carousel-trending {
+          padding-right: 30px;
+
           .bx-cardCaousel {
             min-width: 370px;
           }

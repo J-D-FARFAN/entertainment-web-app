@@ -22,38 +22,36 @@ export function NavbarAplication({ onCategoryChange }) {
   return (
     <>
       <article className="allNavbar">
-        <section className="controllsNavbar">
-          <div className="bx-logo">
-            <img src={iconApp} alt="" className="logo" />
-          </div>
+        <div className="bx-logo">
+          <img src={iconApp} alt="" className="logo" />
+        </div>
 
-          <figure className="btns-navbar">
-            <div
-              className={`bx-icon-navbar ${activeIndex === 0 ? "active" : ""}`}
-              onClick={() => handleClick(0, "Home")} // Llama a la función handleClick con el índice y la categoría correspondiente
-            >
-              <IconNavHome colorActive={"colorIconsNavbar"} />
-            </div>
-            <div
-              className={`bx-icon-navbar ${activeIndex === 1 ? "active" : ""}`}
-              onClick={() => handleClick(1, "Movies")} // Llama a la función handleClick con el índice y la categoría correspondiente
-            >
-              <IconNavMovies colorActive={"colorIconsNavbar"} />
-            </div>
-            <div
-              className={`bx-icon-navbar ${activeIndex === 2 ? "active" : ""}`}
-              onClick={() => handleClick(2, "TV Series")} // Llama a la función handleClick con el índice y la categoría correspondiente
-            >
-              <IconNavTv colorActive={"colorIconsNavbar"} />
-            </div>
-            <div
-              className={`bx-icon-navbar ${activeIndex === 3 ? "active" : ""}`}
-              onClick={() => handleClick(3, "Bookmarked")} // Llama a la función handleClick con el índice y la categoría correspondiente
-            >
-              <IconNavBookmarker colorActive={"colorIconsNavbar"} />
-            </div>
-          </figure>
-        </section>
+        <figure className="btns-navbar">
+          <div
+            className={`bx-icon-navbar ${activeIndex === 0 ? "active" : ""}`}
+            onClick={() => handleClick(0, "Home")} // Llama a la función handleClick con el índice y la categoría correspondiente
+          >
+            <IconNavHome colorActive={"colorIconsNavbar"} />
+          </div>
+          <div
+            className={`bx-icon-navbar ${activeIndex === 1 ? "active" : ""}`}
+            onClick={() => handleClick(1, "Movies")} // Llama a la función handleClick con el índice y la categoría correspondiente
+          >
+            <IconNavMovies colorActive={"colorIconsNavbar"} />
+          </div>
+          <div
+            className={`bx-icon-navbar ${activeIndex === 2 ? "active" : ""}`}
+            onClick={() => handleClick(2, "TV Series")} // Llama a la función handleClick con el índice y la categoría correspondiente
+          >
+            <IconNavTv colorActive={"colorIconsNavbar"} />
+          </div>
+          <div
+            className={`bx-icon-navbar ${activeIndex === 3 ? "active" : ""}`}
+            onClick={() => handleClick(3, "Bookmarked")} // Llama a la función handleClick con el índice y la categoría correspondiente
+          >
+            <IconNavBookmarker colorActive={"colorIconsNavbar"} />
+          </div>
+        </figure>
         <div className="bx-image-avatar">
           <img src={avatar} alt="" className="avatar" />
         </div>

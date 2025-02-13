@@ -87,7 +87,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 824px) {
   .content__allHomeAplicaction {
     flex-direction: column;
     .content__sideNavbar-homeAplication {
@@ -100,6 +100,31 @@
 
       .search-movies {
         padding-left: 1.5rem;
+      }
+
+      .content__trendingHomeAplication {
+        padding-left: 1.5rem;
+      }
+
+      .content_dashboardMovies {
+        width: 100%;
+        padding: 0 1.5rem;
+        gap: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 508px) {
+  .content__allHomeAplicaction {
+    .content__homeAplication {
+      .content__trendingHomeAplication {
+        .content__carousel-trending {
+          .bx-cardCaousel {
+            min-width: 340px;
+            border: 2px solid red;
+          }
+        }
       }
     }
   }
